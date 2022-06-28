@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>closeToMe</title>
+</head>
+
+<body class="root">
+    <div class="page">
+        <header class="header">
+            <div class="header__user">
+                <img src="images/5009.jpg" alt="аватар" class="header__menu-avatar">
+                <a href="" class="header__user-profile">
+                    <h1 class="header__menu-user-name"><span class="header__menu-greeting">Привет</span>, Иван Иванов!</h1>
+                </a>
+                <button class="header__menu-edit" type="button"></button>
+
+            </div>
+            <nav class="header__navigation">
+                <a href="#" class="header__menu-feed link">Главная</a>
+                <a href="#" class="header__menu-setting link">Настройки</a>
+                <a href="#" class="header__menu-user-page link">Уведомления</a>
+
+            </nav>
+            <nav class="header__search-menu">
+                <form class="header__menu-search" action="#" method="get">
+                    <input name="s" placeholder="Искать здесь..." type="search" class="header__menu-input-search">
+                    <!--                    <button class="header__memu-button button" type="submit">Поиск</button>-->
+                </form>
+            </nav>
+
+        </header>
+        <main class="main">
+            <aside class="left-side">
+                <div class="left-side__container-abcolute">
+                    <a href="#" class="left-side__groups">Группы</a>
+                    <a href="#" class="left-side__friends">Друзья</a>
+                    <a href="#" class="left-side__hobbies">Интересы</a>
+                    <a href="#" class="left-side__groups">Группы</a>
+                </div>
+            </aside>
+            <section class="khronos">
+                <div class="user-information">
+                    <div class="user-information__conteiner">
+                        <!--
+                        <form action="#" class="thoughts" id="thoughts">
+                            <textarea name="" id="" cols="60" rows="10" class="thoughts__user" placeholder="What's jn your mind, user"></textarea>
+                        </form>
+                        
+-->
+                        <button class="user-information__submit button" type="submit">add information</button>
+
+
+
+                        <template id="user-thoughts">
+                            <div class="user-thoughts__wrapper">
+                                <p class="user-thoughts__description"></p>
+                                <img src="#" alt="" class="user-thoughts__pic">
+                            </div>
+                            <button type="button" class="message-photo__trash"></button>
+                            <button type="button" class="message-photo__like mesage-photo__like_active">like</button>
+
+                        </template>
+
+                    </div>
+
+                </div>
+
+                <div class="user-loaded">
+
+
+                </div>
+
+            </section>
+            <aside class="right-side">
+                <a href="#" class="right-side__groups">Реклама</a>
+
+
+            </aside>
+        </main>
+        <footer class="footer">
+            blahblah
+        </footer>
+        <div class="popup">
+            <div class="form-container">
+                <button class="form-container__close" type="button"></button>
+                <h2>Sign up</h2>
+                <form action="#" class="registr" name="form-edit-name">
+                    <input type="text" class="registr__name" id="firstName" name="firstName" value="" autofocus placeholder="your name">
+                    <!--                    <input type="text" class="registr__name" id="lastName" name="lastName" value="">-->
+                    <button class="registr__submit" type="submit">registration</button>
+                    <input type="checkbox" class="registr__check" checked>remember me
+                </form>
+            </div>
+
+        </div>
+        <div class="popup-add">
+            <div class="form-container">
+                <button class="form-container__close" type="button" id="closeThoughtsForm"></button>
+                <h2>Push places</h2>
+                <form action="#" class="registr" name="form-edd">
+                    <input type="text" class="registr__name" id="thoughtsPhoto" name="firstNameAdd" value="" placeholder="description">
+                    <input type="text" class="registr__name" id="thoughtsDescription" name="lastNameAdd" value="" placeholder="picture link">
+                    <button class="registr__submit" type="submit">Save</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>

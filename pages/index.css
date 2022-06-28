@@ -1,0 +1,10 @@
+@import url(../default.css);
+@import url(../blocks/page/page.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/main/main.css);
+@import url(../blocks/khronos/khronos.css);
+@import url(../blocks/left-side/left-side.css);
+@import url(../blocks/right-side/right-side.css);
+/*@import url(../blocks/page-inner/page-inner.css);*/
+@import url(../blocks/popup/popup.css);
+
