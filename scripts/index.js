@@ -105,32 +105,6 @@ const userLoadeds = document.querySelector('.user-loadeds');
 
 for (let i = 0; i < userImagesArray.length; i++) {
 
-    //    const userCards = document.createElement('article');
-    //    userCards.classList.add('message-photo');
-    //
-    //    const titleElement = document.createElement('h2');
-    //
-    //    titleElement.classList.add('message-photo__description');
-    //
-    //    titleElement.textContent = userImagesArray[i].name;
-    //
-    //    const userImagesItem = document.createElement('img');
-    //
-    //    userImagesItem.classList.add('message-photo__picture');
-    //
-    //    userImagesItem.src = userImagesArray[i].link;
-    //    userImagesItem.alt = ' ';
-    //
-    //    const likeButton = document.createElement('button');
-    //    likeButton.classList.add('message-photo__like');
-    //    likeButton.textContent = 'like';
-    //
-    //    const trashButton = document.createElement('button');
-    //    trashButton.classList.add('message-photo__trash');
-    //
-    //    userCards.append(titleElement, userImagesItem, likeButton, trashButton);
-
-
     const userLoadedTemplate = document.querySelector('#user-loaded').content.cloneNode(true);
     
     const userLoaded = userLoadedTemplate.querySelector('.message-photo');
