@@ -1,4 +1,4 @@
-//change popup
+//change popup profile
 
 const popup = document.querySelector('.popup')
 const formElement = document.querySelector('.registr')
@@ -8,25 +8,27 @@ const editButton = document.querySelector('.header__menu-edit')
 const closeButton = document.querySelector('.form-container__close')
 const userName = document.querySelector('.header__menu-user-name')
 const greetingUser = document.querySelector('.header__menu-greeting')
+const popupEditProfile = document.querySelector('.popup_edit_profile')
 
 //change popup-add
 
-const popupAdd = document.querySelector('.popup-add')
+
 const addButton = document.querySelector('.user-information__submit')
 const thoughtsPhoto = document.querySelector('#thoughtsPhoto')
 const thoughtsDescription = document.querySelector('#thoughtsDescription')
 const closeThoughtsForm = document.querySelector('#closeThoughtsForm')
-
+const popupAddCard = document.querySelector('.popup_add_card')
+const registrButtonAddSubmit = document.querySelector('.registr__submit')
 
 
 //change popup
 
-function openPopup() {
-    popup.classList.add('popup_active')
+function openPopupProfileEditor() {
+    popupEditProfile.classList.add('popup_active')
 }
 
 function closePopup() {
-    popup.classList.remove('popup_active')
+    popupEditProfile.classList.remove('popup_active')
 }
 
 function saveUserName() {
@@ -40,30 +42,33 @@ function saveUserName() {
 
 
 function openPopupAdd() {
-    popupAdd.classList.add('popup_active')
+    popupAddCard.classList.add('popup_active')
 }
 
 function closePopupAdd() {
-    popupAdd.classList.remove('popup_active')
+    popupAddCard.classList.remove('popup_active')
 }
 
 
-function getLikesActive (likeButton) {
-    likeButton.forEach(items, function() {
-        
+function getLikesActive(likeButton) {
+    likeButton.forEach(items, function () {
+
     })
 }
 
 
 
-editButton.addEventListener('click', openPopup);
+editButton.addEventListener('click', openPopupProfileEditor);
 closeButton.addEventListener('click', closePopup);
 formElement.addEventListener('submit', saveUserName);
-//formElement.addEventListener('submit', saveUserName);
+
 
 
 addButton.addEventListener('click', openPopupAdd);
 closeThoughtsForm.addEventListener('click', closePopupAdd);
+
+const userThoughtsDescription = document.querySelector('.user-thoughts__descriptio');
+const userThoughtsPic = document.querySelector('.user-thoughts__pic')
 
 
 //images array
@@ -73,11 +78,11 @@ const userImagesArray = [
         name: 'pouchofhappy',
         link: './images/5009.jpg'
     },
-     {
+    {
         name: 'werecat',
         link: './images/260941-werecat.jpg'
     },
-     {
+    {
         name: 'fonstola',
         link: './images/fonstola.ru-100651.jpg'
     },
@@ -85,51 +90,76 @@ const userImagesArray = [
         name: 's1200',
         link: './images/s1200.jpg'
     },
-      {
+    {
         name: 'maxresdefault',
         link: './images/maxresdefault.jpg'
     },
-     {
+    {
         name: 'volshebnogo',
         link: './images/volshebnogo_dnja_rojdenija.jpg'
     }
 ];
 
 
-const userLoaded = document.querySelector('.user-loaded');
+const userLoadeds = document.querySelector('.user-loadeds');
 
-for(let i = 0; i < userImagesArray.length; i++) {
+for (let i = 0; i < userImagesArray.length; i++) {
+
+    //    const userCards = document.createElement('article');
+    //    userCards.classList.add('message-photo');
+    //
+    //    const titleElement = document.createElement('h2');
+    //
+    //    titleElement.classList.add('message-photo__description');
+    //
+    //    titleElement.textContent = userImagesArray[i].name;
+    //
+    //    const userImagesItem = document.createElement('img');
+    //
+    //    userImagesItem.classList.add('message-photo__picture');
+    //
+    //    userImagesItem.src = userImagesArray[i].link;
+    //    userImagesItem.alt = ' ';
+    //
+    //    const likeButton = document.createElement('button');
+    //    likeButton.classList.add('message-photo__like');
+    //    likeButton.textContent = 'like';
+    //
+    //    const trashButton = document.createElement('button');
+    //    trashButton.classList.add('message-photo__trash');
+    //
+    //    userCards.append(titleElement, userImagesItem, likeButton, trashButton);
+
+
+    const userLoadedTemplate = document.querySelector('#user-loaded').content.cloneNode(true);
     
-      const userCards = document.createElement('article');
-    userCards.classList.add('message-photo');
+    const userLoaded = userLoadedTemplate.querySelector('.message-photo');
     
-     const titleElement = document.createElement('h2');
+    const messagePhoto = userLoadedTemplate.querySelector('.message-photo');
     
-    titleElement.classList.add('message-photo__description');
+    userLoadedTemplate.querySelector('.message-photo__description').textContent = userImagesArray[i].name;
     
-    titleElement.textContent = userImagesArray[i].name;
+     userLoadedTemplate.querySelector('.message-photo__picture').src = userImagesArray[i].link;
     
-    const userImagesItem = document.createElement('img');
+    const likeButton = userLoadedTemplate.querySelector('.message-photo__like') 
+     likeButton.textContent = 'like';
     
-    userImagesItem.classList.add('message-photo__picture');
-    
-    userImagesItem.src = userImagesArray[i].link;
-    userImagesItem.alt = ' ';
-    
-    const likeButton = document.createElement('button');
-    likeButton.classList.add('message-photo__like');
-    likeButton.textContent = 'like';
-    
-    const trashButton = document.createElement('button');
-    trashButton.classList.add('message-photo__trash');
-    
-    userCards.append(titleElement, userImagesItem, likeButton, trashButton)
-  
-    
-    userLoaded.append(userCards)
+     const trashButton = userLoadedTemplate.querySelector('.message-photo__trash');
+
+    userLoadeds.append(userLoaded)
+
 }
 
+//function addThoughtsPictureDescription () {
+//    evt.preventDefault;
+//    userImagesArray.name = userThoughtsDescription.value;
+//    userImagesArray.link = userThoughtsPic.src;   userImagesArray.append( userImagesArray.name, userImagesArray.link);
+//      closePopup();
+//}
 
+//registrButtonAddSubmit.addEventListener('click', function() {
+//    
+//});
 
 //likes
 
@@ -137,11 +167,11 @@ const likeButtons = document.querySelectorAll('.message-photo__like')
 
 
 
-likeButtons.forEach (function (items) {
-items.addEventListener('click', function() {
-    items.classList.toggle('mesage-photo__like_active')
-})
-    
+likeButtons.forEach(function (items) {
+    items.addEventListener('click', function () {
+        items.classList.toggle('mesage-photo__like_active')
+    })
+
 })
 
 
@@ -150,16 +180,12 @@ items.addEventListener('click', function() {
 const deleteCardsButtons = document.querySelectorAll('.message-photo__trash');
 
 
-deleteCardsButtons.forEach(function (item){
-    item.addEventListener('click', function() {
-    const articleItem = item.closest('.message-photo');
-    articleItem.remove();
-})
-}
-                          
-                         
-                         )
-
-                          
+deleteCardsButtons.forEach(function (item) {
+        item.addEventListener('click', function () {
+            const articleItem = item.closest('.message-photo');
+            articleItem.remove();
+        })
+    }
 
 
+)
