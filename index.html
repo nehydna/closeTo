@@ -52,30 +52,17 @@
                         </form>
                         
 -->
-
-                        <button class="user-information__submit button" type="submit">add information</button>
-
-
-
-                        <template id="user-thoughts">
-                            <div class="user-thoughts__wrapper">
-                                <p class="user-thoughts__description"></p>
-                                <img src="#" alt="" class="user-thoughts__pic">
-                            </div>
-                            <button type="button" class="message-photo__trash"></button>
-                            <button type="button" class="message-photo__like mesage-photo__like_active">like</button>
-
-                        </template>
+                     <button class="user-information__submit button" type="submit">add information</button>
 
                     </div>
 
                 </div>
-           
-                    <div class="user-loadeds">
+
+                <div class="user-loaded">
 
 
-                    </div>
-           
+                </div>
+
 
 
             </section>
@@ -85,16 +72,19 @@
 
             </aside>
         </main>
-        
-         <template id="user-loaded">
-                    <article class="message-photo">
-                        <h2 class="message-photo__description"></h2>
-                        <img src="" alt="" class="message-photo__picture">
-                        <button class="message-photo__like"></button>
-                        <button class="message-photo__trash"></button>
 
-                    </article>
-                </template>
+        <template id="user-loaded-card">
+            <article class="message-photo">
+                <h2 class="message-photo__description"></h2>
+                <img src="" alt="" class="message-photo__picture">
+                <button type="button" class="message-photo__like"></button>
+                <button type="button" class="message-photo__trash"></button>
+
+            </article>
+
+
+        </template>
+
         <footer class="footer">
             blahblah
         </footer>
@@ -115,11 +105,18 @@
             <div class="form-container">
                 <button class="form-container__close" type="button" id="closeThoughtsForm"></button>
                 <h2>Push places</h2>
-                <form action="#" class="registr" name="form-edd">
-                    <input type="text" class="registr__name" id="thoughtsPhoto" name="pictureAdd" value="" placeholder="description">
-                    <input type="text" class="registr__name" id="thoughtsDescription" name="descriptionAdd" value="" placeholder="picture link">
+                <form action="#" class="registr" id="form-edd">
+                    <input type="text" class="registr__name" id="thoughtsPhoto" name="pictureAdd" value="" placeholder="picture link">
+                    <input type="text" class="registr__name" id="thoughtsDescription" name="descriptionAdd" value="" placeholder="picture name">
                     <button class="registr__submit" type="submit">Save</button>
                 </form>
+            </div>
+        </div>
+        <div class="popup popup_card_open">
+            <div class="zoom-container">
+                <img src="#" alt="" class="zoom-container__card-pic">
+                <p class="zoom-container__card-description"></p>
+                <button class="zoom-container__close" type="button" id="card-close"></button>
             </div>
 
         </div>

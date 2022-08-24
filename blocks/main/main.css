@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-around;
     min-height: 100vh;
-    background-color: azure;
+    background-color: beige;
     padding: 0 20px;
     box-sizing: border-box;
 
@@ -45,7 +45,7 @@
 ////////////////////////////
 
 
-.user-loadeds {
+.user-loaded {
     display: grid;
 
 
@@ -53,18 +53,27 @@
 
 .message-photo {
     position: relative;
-    max-width: 500px;
+    max-width: 600px;
     border: 2px solid lightblue;
     border-radius: 10px;
     margin: 50px 0 0;
     padding: 0;
 }
 
+/*
+
+*/
+
 .message-photo__picture {
     display: block;
     width: 100%;
+    max-height: 600px;
     object-fit: cover;
-    object-position: center;
+    object-position: top;
+    cursor: pointer;
+}
+
+.message-photo__picture:hover {
     cursor: pointer;
 }
 
@@ -95,17 +104,10 @@
     letter-spacing: 0.1em;
 }
 
-/*
-.message-photo__like:hover {
-    background: none;
-    color: chartreuse;
-    transition: 0.5s;
-}
-*/
-
 
 .mesage-photo__like_active {
     background: url(../../images/Union.svg) no-repeat center transparent;
     color: transparent;
-
 }
+
+
