@@ -36,6 +36,20 @@ const popupEditProfile = document.querySelector('.popup_edit_profile');
 const popupAddCard = document.querySelector('.popup_add_card');
 const cardOpen = document.querySelector('.popup_card_open');
 
+
+//forms, inputs
+
+const formElement = document.querySelector('.registr')
+const formEdd = document.querySelector('#form-edd');
+const formEditProfile = document.querySelector('#form-edit-profile');
+
+const formInput = document.querySelector('.registr__name');
+
+//form add card inputs
+
+const thoughtsPhoto = document.querySelector('#thoughtsPhoto');
+const thoughtsDescription = document.querySelector('#thoughtsDescription');
+
 //buttons
 
 const buttonCardEdit = document.querySelector('.header__menu-edit');
@@ -43,17 +57,8 @@ const buttonAddCard = document.querySelector('.user-information__submit');
 const buttonClosePopupEditProfile = document.querySelector('.form-container__close');
 const buttonCloseThoughtsForm = document.querySelector('#closeThoughtsForm');
 const buttonCardClose = document.querySelector('#card-close');
+const buttonSubmitAddCards = formEdd.querySelector('.registr__submit');
 
-
-//forms, inputs
-
-const formEdd = document.querySelector('#form-edd');
-const formElement = document.querySelector('.registr')
-
-//form add card inputs
-
-const thoughtsPhoto = document.querySelector('#thoughtsPhoto');
-const thoughtsDescription = document.querySelector('#thoughtsDescription');
 
 //zoom inputs
 
@@ -166,10 +171,11 @@ buttonClosePopupEditProfile.addEventListener('click', function () {
     closePopup(popupEditProfile)
 });
 
-formElement.addEventListener('submit', saveUserName);
+formEditProfile.addEventListener('submit', saveUserName);
 
 buttonAddCard.addEventListener('click', function () {
-    openPopup(popupAddCard)
+    openPopup(popupAddCard);
+//     toggleButtonAttribute(inputList, buttonElement)
 
 });;
 
@@ -179,4 +185,18 @@ buttonCloseThoughtsForm.addEventListener('click', function () {
 
 buttonCardClose.addEventListener('click', function () {
     closePopup(cardOpen)
+});
+
+
+const popups = Array.from(document.querySelectorAll('.popup'));
+
+popups.forEach(function(item) {
+    item.addEventListener('click', function(evt) {
+        if(evt.target == item){
+           closePopup(item)
+        }
+    })
 })
+
+
+//block buttons

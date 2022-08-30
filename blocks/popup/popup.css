@@ -42,6 +42,7 @@
 
 
 .registr__name {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin: 20px 10px 30px;
@@ -50,18 +51,44 @@
     outline: none;
     border: none;
     border-bottom: 2px solid lightgrey;
-
 }
 
-.registr__name:nth-child(2) {
+.registr__name:last-of-type {
     margin-top: 0;
 }
 
+.registr__name_type_error {
+    border-bottom-color: red;
+}
+
+.registr__name-error {
+    display: none;
+    position: absolute;
+    margin: 0;
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: -100px;
+}
+
+
+.registr__name-error_active {
+    display: block;
+}
 
 .registr__submit {
     width: 200px;
     padding: 20px 30px;
     box-sizing: border-box;
+}
+
+.registr__submit:disabled {
+    background-color: lightgray;
+    cursor: auto;
+}
+
+.registr__submit:disabled:hover{
+    opacity: 1;
 }
 
 .form-container__close,
@@ -90,7 +117,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-/*    align-items: center;*/
+    /*    align-items: center;*/
     width: 700px;
     padding: 10px;
     background-color: white;

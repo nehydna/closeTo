@@ -53,7 +53,7 @@
                         </form>
                         
 -->
-                     <button class="user-information__submit button" type="submit">add information</button>
+                        <button class="user-information__submit button" type="submit">add information</button>
 
                     </div>
 
@@ -93,10 +93,13 @@
             <div class="form-container">
                 <button class="form-container__close" type="button"></button>
                 <h2>Sign up</h2>
-                <form action="#" class="registr" name="form-edit-name">
-                    <input type="text" class="registr__name" id="firstName" name="firstName" value="" autofocus placeholder="your name">
+                <form action="#" class="registr" name="form-edit-name" id="form-edit-profile" novalidate>
+                    <label class="form__field">
+                        <input type="text" class="registr__name" id="firstName" name="firstName" value="" autofocus placeholder="your name" required minlength="2" maxlength="40">
+                        <span class="registr__name-error firstName-error"></span>
+                    </label>
                     <!--                    <input type="text" class="registr__name" id="lastName" name="lastName" value="">-->
-                    <button class="registr__submit" type="submit">registration</button>
+                    <button class="registr__submit" type="submit" >registration</button>
                     <input type="checkbox" class="registr__check" checked>remember me
                 </form>
             </div>
@@ -106,9 +109,15 @@
             <div class="form-container">
                 <button class="form-container__close" type="button" id="closeThoughtsForm"></button>
                 <h2>Push places</h2>
-                <form action="#" class="registr" id="form-edd">
-                    <input type="text" class="registr__name" id="thoughtsPhoto" name="pictureAdd" value="" placeholder="picture link">
-                    <input type="text" class="registr__name" id="thoughtsDescription" name="descriptionAdd" value="" placeholder="picture name">
+                <form action="#" class="registr" id="form-edd" novalidate>
+                    <label class="form__field">
+                        <input type="url" class="registr__name" id="thoughtsPhoto" name="pictureAdd" value="" placeholder="picture link" required>
+                        <span class="registr__name-error thoughtsPhoto-error"></span>
+                    </label>
+                    <label class="form__field">
+                        <input type="text" class="registr__name" id="thoughtsDescription" name="descriptionAdd" value="" placeholder="picture name" required minlength="2" maxlength="200">
+                        <span class="registr__name-error thoughtsDescription-error"></span>
+                    </label>
                     <button class="registr__submit" type="submit">Save</button>
                 </form>
             </div>
@@ -123,6 +132,7 @@
         </div>
     </div>
     <script src="scripts/index.js"></script>
+    <script src="scripts/validations.js"></script>
 </body>
 
 </html>
