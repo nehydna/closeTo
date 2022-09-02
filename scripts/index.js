@@ -1,33 +1,3 @@
-//images array
-
-const userImagesArray = [
-    {
-        name: 'pouchofhappy',
-        link: './images/5009.jpg'
-    },
-    {
-        name: 'werecat',
-        link: './images/260941-werecat.jpg'
-    },
-    {
-        name: 'fonstola',
-        link: './images/fonstola.ru-100651.jpg'
-    },
-    {
-        name: 's1200',
-        link: './images/s1200.jpg'
-    },
-    {
-        name: 'maxresdefault',
-        link: './images/maxresdefault.jpg'
-    },
-    {
-        name: 'volshebnogo',
-        link: './images/volshebnogo_dnja_rojdenija.jpg'
-    }
-];
-
-
 const userLoaded = document.querySelector('.user-loaded');
 
 //All popups
@@ -57,7 +27,7 @@ const buttonAddCard = document.querySelector('.user-information__submit');
 const buttonClosePopupEditProfile = document.querySelector('.form-container__close');
 const buttonCloseThoughtsForm = document.querySelector('#closeThoughtsForm');
 const buttonCardClose = document.querySelector('#card-close');
-const buttonSubmitAddCards = formEdd.querySelector('.registr__submit');
+const buttonSubmitAddCards = formEdd.querySelector('.registr__submit_type_add');
 
 
 //zoom inputs
@@ -149,7 +119,9 @@ function toggleLikeButton(evt) {
 }
 
 function openPopup(popup) {
-    popup.classList.add('popup_active')
+    popup.classList.add('popup_active');
+    buttonSubmitAddCards.disabled = true;
+
 }
 
 function closePopup(popup) {
@@ -175,7 +147,7 @@ formEditProfile.addEventListener('submit', saveUserName);
 
 buttonAddCard.addEventListener('click', function () {
     openPopup(popupAddCard);
-//     toggleButtonAttribute(inputList, buttonElement)
+    //     toggleButtonAttribute(inputList, buttonElement)
 
 });;
 
@@ -190,10 +162,10 @@ buttonCardClose.addEventListener('click', function () {
 
 const popups = Array.from(document.querySelectorAll('.popup'));
 
-popups.forEach(function(item) {
-    item.addEventListener('click', function(evt) {
-        if(evt.target == item){
-           closePopup(item)
+popups.forEach(function (item) {
+    item.addEventListener('click', function (evt) {
+        if (evt.target == item) {
+            closePopup(item)
         }
     })
 })

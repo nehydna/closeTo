@@ -62,18 +62,13 @@
 }
 
 .registr__name-error {
-    display: none;
+    display: block;
     position: absolute;
     margin: 0;
     color: red;
     font-size: 14px;
     font-weight: 400;
     margin-top: -100px;
-}
-
-
-.registr__name-error_active {
-    display: block;
 }
 
 .registr__submit {
@@ -87,7 +82,7 @@
     cursor: auto;
 }
 
-.registr__submit:disabled:hover{
+.registr__submit:disabled:hover {
     opacity: 1;
 }
 
