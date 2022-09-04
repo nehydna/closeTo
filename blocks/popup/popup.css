@@ -86,8 +86,7 @@
     opacity: 1;
 }
 
-.form-container__close,
-.zoom-container__close {
+.form-container__close {
     position: absolute;
     background: url(../../images/closeIcon.svg) no-repeat center;
     width: 30px;
@@ -98,10 +97,12 @@
     outline: none;
 }
 
+/*
 .zoom-container__close:hover {
     background-color: transparent;
     opacity: 0.5;
 }
+*/
 
 .popup_card_open {
     background-color: rgba(0, 0, 0, 0.6);
@@ -119,14 +120,14 @@
     border-radius: 10px;
 }
 
-.zoom-container__card-description {
+.form-container__card-description {
     max-width: 100%;
     margin: 0;
     padding: 20px;
     background-color: beige;
 }
 
-.zoom-container__card-pic {
+.form-container__card-pic {
     display: block;
     width: 100%;
     object-fit: cover;

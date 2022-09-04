@@ -47,7 +47,9 @@ const toggleButtonAttribute = (inputElement, buttonElement, settings) => {
 const setEventListeners = (form, settings) => {
     const inputList = Array.from(form.querySelectorAll(settings.inputElement));
     const buttonElement = form.querySelector(settings.buttonElement);
-    toggleButtonAttribute(inputList, buttonElement, settings)
+    
+    toggleButtonAttribute(inputList, buttonElement, settings);
+    
     inputList.forEach(function (inputElement) {
         inputElement.addEventListener('input', function () {
             checkisValid(form, inputElement, settings);
@@ -62,7 +64,7 @@ const enableValidationForm = (settings) => {
         form.addEventListener('submit', (evt) => {
             evt.preventDefault();
         })
-        setEventListeners(form,settings);
+        setEventListeners(form, settings);
     })
 }
 

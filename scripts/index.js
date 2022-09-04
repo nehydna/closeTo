@@ -24,16 +24,16 @@ const thoughtsDescription = document.querySelector('#thoughtsDescription');
 
 const buttonCardEdit = document.querySelector('.header__menu-edit');
 const buttonAddCard = document.querySelector('.user-information__submit');
-const buttonClosePopupEditProfile = document.querySelector('.form-container__close');
-const buttonCloseThoughtsForm = document.querySelector('#closeThoughtsForm');
-const buttonCardClose = document.querySelector('#card-close');
-const buttonSubmitAddCards = formEdd.querySelector('.registr__submit_type_add');
+
+
+
+const buttonsClosePopup = Array.from(document.querySelectorAll('.form-container__close'));
 
 
 //zoom inputs
 
-const cardOpenDescription = document.querySelector('.zoom-container__card-description');
-const cardOpenPic = document.querySelector('.zoom-container__card-pic');
+const cardOpenDescription = document.querySelector('.form-container__card-description');
+const cardOpenPic = document.querySelector('.form-container__card-pic');
 
 //profile edit inputs
 
@@ -80,6 +80,10 @@ function createCard(photo, titles) {
     messagePhotoPicture.addEventListener('click', function () {
         zoomImageCard(photo, titles)
     })
+    
+    const buttonSubmitAddCards = formEdd.querySelector('.registr__submit_type_add');
+
+    buttonSubmitAddCards.disabled = true;
 
     //    userLoaded.prepend(messagePhoto)
     return messagePhoto
@@ -94,6 +98,17 @@ userImagesArray.forEach(function (items) {
     renderCard(items.link, items.name)
 
 })
+
+
+function openPopup(popup) {
+    popup.classList.add('popup_active');
+}
+
+function closePopup(popup) {
+    popup.classList.remove('popup_active')
+}
+
+
 
 function handleAddCard() {
     event.preventDefault()
@@ -118,17 +133,6 @@ function toggleLikeButton(evt) {
     evt.target.classList.toggle('mesage-photo__like_active')
 }
 
-function openPopup(popup) {
-    popup.classList.add('popup_active');
-    buttonSubmitAddCards.disabled = true;
-
-}
-
-function closePopup(popup) {
-    popup.classList.remove('popup_active')
-}
-
-
 
 //listeners
 
@@ -139,25 +143,22 @@ buttonCardEdit.addEventListener('click', function () {
 
 });
 
-buttonClosePopupEditProfile.addEventListener('click', function () {
-    closePopup(popupEditProfile)
-});
 
 formEditProfile.addEventListener('submit', saveUserName);
 
 buttonAddCard.addEventListener('click', function () {
     openPopup(popupAddCard);
-    //     toggleButtonAttribute(inputList, buttonElement)
 
-});;
-
-buttonCloseThoughtsForm.addEventListener('click', function () {
-    closePopup(popupAddCard)
-})
-
-buttonCardClose.addEventListener('click', function () {
-    closePopup(cardOpen)
 });
+
+
+buttonsClosePopup.forEach(function (button) {
+    button.addEventListener('click', function () {
+        const popupItem = button.closest('.popup');
+        closePopup(popupItem)
+
+    })
+})
 
 
 const popups = Array.from(document.querySelectorAll('.popup'));
@@ -169,6 +170,3 @@ popups.forEach(function (item) {
         }
     })
 })
-
-
-//block buttons
