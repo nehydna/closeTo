@@ -1,3 +1,5 @@
+export const formValidation = (function() {
+
 const settings = {
     form: '.registr',
     inputElement: '.registr__name',
@@ -69,3 +71,4 @@ const enableValidationForm = (settings) => {
 }
 
 enableValidationForm(settings);
+}())

@@ -1,3 +1,6 @@
+import {userImagesArray} from './initialCards.js';
+import {formValidation} from './validations.js';
+
 const userLoaded = document.querySelector('.user-loaded');
 
 //All popups

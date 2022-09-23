@@ -1,4 +1,4 @@
-const userImagesArray = [
+export const userImagesArray = [
     {
         name: 'pouchofhappy',
         link: './images/5009.jpg'
