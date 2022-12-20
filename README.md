@@ -19,5 +19,5 @@
 
 
 Посмотреть можно здесь: https://nehydna.github.io/closeTo/
-Но еще не готово
+
 
