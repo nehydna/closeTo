@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: 1.5s;
+}
+
+a:hover {
+    color: aqua;
+}
+
+a:active {
+    color: blueviolet;
+}
+
+button {
+    cursor: pointer;
+    transition: 0.5s;
+    background-color: blue;
+    border: 2px solid lightblue;
+    border-radius: 2px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    opacity: 0.5;
+}
+
+.button:disabled {
+    background-color: lightblue;
+}

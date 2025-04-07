@@ -1,0 +1,141 @@
+.popup {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: 1s;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+
+.form-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    padding: 10px;
+    background-color: beige;
+    border-radius: 10px;
+}
+
+.registr {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+.registr__name {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 10px 30px;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid lightgrey;
+}
+
+.registr__name:last-of-type {
+    margin-top: 0;
+}
+
+.registr__name_type_error {
+    border-bottom-color: red;
+}
+
+.registr__name-error {
+    display: block;
+    position: absolute;
+    margin: 0;
+    color: red;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: -100px;
+}
+
+.registr__submit {
+    width: 200px;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.registr__submit:disabled {
+    background-color: lightgray;
+    cursor: auto;
+}
+
+.registr__submit:disabled:hover {
+    opacity: 1;
+}
+
+.form-container__close {
+    position: absolute;
+    background: url(../../images/closeIcon.svg) no-repeat center;
+    width: 30px;
+    height: 30px;
+    right: 0;
+    top: -40px;
+    border: none;
+    outline: none;
+}
+
+/*
+.zoom-container__close:hover {
+    background-color: transparent;
+    opacity: 0.5;
+}
+*/
+
+.popup_card_open {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.zoom-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*    align-items: center;*/
+    width: 700px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.form-container__card-description {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    background-color: beige;
+}
+
+.form-container__card-pic {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    max-height: 450px;
+}
+
+.popup_active {
+    visibility: visible;
+    opacity: 1;
+}

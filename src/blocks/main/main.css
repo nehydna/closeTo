@@ -1,0 +1,113 @@
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    min-height: 100vh;
+    background-color: beige;
+    padding: 0 20px;
+    box-sizing: border-box;
+
+}
+
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 30%;
+    border-left: 2px solid blue;
+    line-height: 50px;
+    padding-top: 100px;
+    align-items: center;
+
+}
+
+
+
+
+.khronos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background: white;
+    margin: auto;
+    padding-top: 100px;
+}
+
+
+.user-information__submit {
+    padding: 10px 20px;
+}
+
+
+
+
+
+
+.user-loaded {
+    display: grid;
+
+
+}
+
+.message-photo {
+    position: relative;
+    max-width: 600px;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    margin: 50px 0 0;
+    padding: 0;
+}
+
+/*
+
+*/
+
+.message-photo__picture {
+    display: block;
+    width: 100%;
+    max-height: 600px;
+    object-fit: cover;
+    object-position: top;
+    cursor: pointer;
+}
+
+.message-photo__picture:hover {
+    cursor: pointer;
+}
+
+.message-photo__description {
+    margin: 0;
+    padding: 20px;
+}
+
+.message-photo__trash {
+    width: 25px;
+    height: 25px;
+    right: 20px;
+    position: absolute;
+    top: 20px;
+    background: url(../../images/Trash.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: blue;
+}
+
+.message-photo__like {
+    color: blue;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 10px 40px;
+    text-decoration: underline;
+    letter-spacing: 0.1em;
+}
+
+
+.mesage-photo__like_active {
+    background: url(../../images/Union.svg) no-repeat center transparent;
+    color: transparent;
+}
+
+
